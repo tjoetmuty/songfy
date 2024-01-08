@@ -11,7 +11,7 @@ const App = () => {
             world.
           </p>
           <div className="flex justify-center mt-6">
-            <button className="text-white w-48 h-8 flex justify-center items-center bg-bluee b">
+            <button className="text-white font-semibold w-48 h-10 flex justify-center items-center bg-[#0A68AB] rounded">
               Login With Spotify
             </button>
           </div>

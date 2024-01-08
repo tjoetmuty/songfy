@@ -9,9 +9,7 @@ export default {
     backgroundImage: {
       'img': "url('./src/img/background.png')",
     },
-    colors: {
-      'bluee': "#0A68AB"
-    }
+   
   },
   plugins: [],
 }
