@@ -3,7 +3,7 @@ import "./App.css";
 const App = () => {
   return (
     <>
-      <div className="bg-cover bg-center h-screen bg-img flex justify-center items-center">
+      <div className="h-screen w-full bg-cover bg-center flex items-center justify-center bg-img ">
         <div>
           <h1 className="text-white font-bold text-[60px]">Songfy</h1>
           <p className="text-white text-[20px]">
