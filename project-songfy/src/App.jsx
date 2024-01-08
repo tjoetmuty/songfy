@@ -5,7 +5,7 @@ const App = () => {
     <>
       <div className="h-screen w-full bg-cover bg-center flex items-center justify-center bg-img ">
         <div>
-          <h1 className="text-white font-bold text-[60px]">Songfy</h1>
+          <h1 className="text-white font-bold text-[60px] flex justify-center">Songfy</h1>
           <p className="text-white text-[20px]">
             Discover, listen to, and enjoy millions of songs from around the
             world.
