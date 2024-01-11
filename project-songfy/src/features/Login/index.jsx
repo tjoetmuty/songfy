@@ -17,11 +17,14 @@ const LoginFeatures = () => {
     const params = new URLSearchParams(window.location.hash.substring(1));
     const access_token = params.get(`access_token`);
 
-    if(access_token){
-      localStorage.setItem('access_token', access_token)
-      setToken(access_token)
+    if (access_token) {
+      localStorage.setItem("access_token", access_token);
+      setToken(access_token);
+     
     }
   }, []);
+
+
   return (
     <>
       <div className="h-screen w-full bg-cover bg-center flex items-center justify-center bg-img ">
