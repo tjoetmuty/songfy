@@ -29,16 +29,17 @@ const Sidebar = () => {
             <img
               src={play}
               alt=""
-              className={`absolute w-[19px] h-[19px]  mr-4 cursor-pointer ${
+              className={`absolute w-[19px] h-[19px]  cursor-pointer ${
                 !open && "rotate-180"
               }`}
               onClick={() => setOpen(!open)}
             />
           </div>
+          <hr className="mx-4 my-[24px]"/>
           <ul>
             {Menu.map((menus, index) => (
-              <li key={index}>
-                <img src={menus.src} alt={menus.title} />
+              <li key={index} className="text-white text-md flex items-center gap-x-4 p-4 mx-2 hover:bg-[#737373] rounded-md">
+                <img src={`./src/assets/${menus.src}.png`} alt={menus.title} />
                 <p
                   className={`text-white ${
                     !open && "hidden"
