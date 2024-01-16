@@ -43,7 +43,7 @@ const Sidebar = () => {
                 <p
                   className={`text-white ${
                     !open && "hidden"
-                  } origin-lef duration-200`}
+                  } origin-lef duration-100`}
                 >
                   {menus.title}
                 </p>
