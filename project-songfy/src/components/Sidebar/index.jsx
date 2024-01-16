@@ -8,9 +8,10 @@ const Sidebar = () => {
     {title: "Top Music", src: "Music"},
     {title: "Recently Played", src: "Delivery-Time"},
   ]
+  
   return (
     <>
-      <div className="bg-black flex">
+      <div className="bg-black flex gap-2 px-2 py-2">
         <div
           className={`${
             open ? `w-[242px]` : `w-[84px]`
@@ -30,14 +31,14 @@ const Sidebar = () => {
           <ul>
             {Menu.map((menu, index) => (
               <li key={index}>
-                <img src={`.././assets/${menu.src}`} alt="" />
+                <img src={`/assets/${menu.src}`} alt="" />
                 <span className={`text-white ${!open && "hidden"} origin-lef duration-200`}>{menu.title}</span>
               </li>
             
             ))}
           </ul>
         </div>
-        <div>
+        <div className="bg-[#1E1E1E] w-full rounded-md">
           <h1 className="text-white">Good Morning</h1>
         </div>
       </div>
