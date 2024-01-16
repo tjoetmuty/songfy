@@ -1,9 +1,8 @@
-
-const sayHello = () => {
+const SayHello = () => {
   return (
-    <>
-    <h1>Good Morning</h1></>
-  )
-}
+      <h1 className="text-white font-bold text-[32px]">Good Morning</h1>
 
-export default sayHello
+  );
+};
+
+export default SayHello;
