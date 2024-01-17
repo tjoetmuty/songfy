@@ -5,9 +5,11 @@ import {
   REDIRECT_URI,
   SCOPE_PARAM,
 } from "../../helpers/config";
+import { useNavigate } from "react-router-dom";
 
 const LoginFeatures = () => {
   const [token, setToken] = useState("");
+  const navigate = useNavigate();
 
   const handleLogin = () => {
     window.location.href = `${AUTHORIZE_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&scope=${SCOPE_PARAM}&response_type=token&show_dialog=true`;
@@ -38,7 +40,9 @@ const LoginFeatures = () => {
           </p>
           <div className="flex justify-center mt-6">
             <button
-              onClick={handleLogin}
+              onClick={() => {
+                token ? navigate('/dashboard') : handleLogin()
+              }}
               className="text-white font-semibold w-48 h-10 flex justify-center items-center bg-[#0A68AB] rounded"
             >
               {token ? "Go to Dashboard" : "Login with Spotify"}

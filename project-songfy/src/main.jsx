@@ -7,9 +7,9 @@ import Sidebar from './components/Sidebar/index.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Sidebar/>
-    {/* <BrowserRouter>
+    {/* <Sidebar/> */}
+    <BrowserRouter>
     <App />
-    </BrowserRouter> */}
+    </BrowserRouter>
   </React.StrictMode>,
 )
