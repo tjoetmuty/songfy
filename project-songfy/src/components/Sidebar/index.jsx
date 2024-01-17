@@ -55,10 +55,6 @@ const Sidebar = () => {
             ))}
           </ul>
         </div>
-        <div className="bg-[#5B3838] w-full rounded-md pl-4 pt-4">
-          <SayHello />
-          <div></div>
-        </div>
       </div>
     </>
   );
