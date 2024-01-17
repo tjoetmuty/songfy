@@ -1,18 +1,17 @@
 import play from "../../assets/gravity.png";
 import { useState } from "react";
-import SayHello from "../Greetings";
 import { useNavigate } from "react-router-dom";
 
 const Sidebar = () => {
   const [open, setOpen] = useState(true);
   const navigate = useNavigate();
   const Menu = [
-    { path: "/dashboard", title: "Dashboard" },
+    { path: "/dashboard", title: "Dashboard", src: "home"},
     { path: "/top-artist", title: "Top Artist", src: "Micro" },
   ];
   return (
     <>
-      <div className="bg-black flex gap-2 px-2 py-2">
+      <div className=" flex gap-2 px-2 py-2">
         <div
           className={`${
             open ? `w-[242px]` : `w-[84px]`
@@ -24,7 +23,7 @@ const Sidebar = () => {
                 !open && "scale-0"
               }`}
             >
-              Spotify
+              Songfy
             </h1>
             <img
               src={play}
