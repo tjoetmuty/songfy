@@ -1,6 +1,4 @@
-import React from 'react'
-
- const Dashboard = () => {
+const Dashboard = () => {
   return (
     <div>Dashboard</div>
   )

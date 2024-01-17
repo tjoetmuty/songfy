@@ -1,15 +1,15 @@
 import play from "../../assets/gravity.png";
 import { useState } from "react";
 import SayHello from "../Greetings";
+import { useNavigate } from "react-router-dom";
 
 const Sidebar = () => {
   const [open, setOpen] = useState(true);
+  const navigate = useNavigate();
   const Menu = [
-    { title: "Top Artist", src: "Micro" },
-    { title: "Top Music", src: "Music" },
-    { title: "Recently Played", src: "Delivery-Time" },
+    { path: "/dashboard", title: "Dashboard" },
+    { path: "/top-artist", title: "Top Artist", src: "Micro" },
   ];
-  console.log(Menu[0]);
   return (
     <>
       <div className="bg-black flex gap-2 px-2 py-2">
@@ -35,17 +35,21 @@ const Sidebar = () => {
               onClick={() => setOpen(!open)}
             />
           </div>
-          <hr className="mx-4 my-[24px]"/>
+          <hr className="mx-4 my-[24px]" />
           <ul>
-            {Menu.map((menus, index) => (
-              <li key={index} className="text-white text-md flex items-center gap-x-4 p-4 mx-2 hover:bg-[#737373] rounded-md">
-                <img src={`./src/assets/${menus.src}.png`} alt={menus.title} />
+            {Menu.map((item, index) => (
+              <li
+                key={index}
+                className="text-white text-md flex items-center gap-x-4 p-4 mx-2 hover:bg-[#737373] rounded-md"
+              >
+                <img src={`./src/assets/${item.src}.png`} alt={item.title} />
                 <p
                   className={`text-white ${
                     !open && "hidden"
                   } origin-lef duration-100`}
+                  onClick={() => navigate(item?.path)}
                 >
-                  {menus.title}
+                  {item.title}
                 </p>
               </li>
             ))}
