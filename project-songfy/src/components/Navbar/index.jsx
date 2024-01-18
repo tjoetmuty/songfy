@@ -21,7 +21,7 @@ const Navbar = () => {
     getMe()
   }, [])
   return (
-    <div>
+    <div className="w-full h-20 bg-gray-400 rounded-xl flex justify-between p-3">
       <h1>Hi, {data?.display_name}</h1>
       <img src={data?.images[1]?.url} alt="profile" className="rounded-full" />
     </div>
