@@ -39,7 +39,7 @@ const Sidebar = () => {
             {Menu.map((item, index) => (
               <li
                 key={index}
-                className="text-white text-md flex items-center gap-x-4 p-4 mx-2 hover:bg-[#737373] rounded-md"
+                className="text-white text-md flex items-center gap-x-4 p-4 mx-2 hover:bg-[#737373] rounded-md cursor-pointer"
               >
                 <img src={`./src/assets/${item.src}.png`} alt={item.title} />
                 <p

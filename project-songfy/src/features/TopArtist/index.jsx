@@ -1,6 +1,6 @@
 const TopArtistFeatures = () => {
   return (
-    <div>index</div>
+    <div>Ini Top Artist</div>
   )
 }
 
