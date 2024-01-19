@@ -24,7 +24,7 @@ const Navbar = () => {
   return (
     <div className="w-full h-20 bg-gray-400 rounded-xl flex justify-between items-center p-3">
       <h1 className="font-bold">Hi, {data?.display_name}</h1>
-      <img src={data?.images[0]?.url} alt="profile" className="rounded-full w-[50px] h-[50px]" />
+      <img src={data?.images?.url} alt="profile" className="rounded-full w-[50px] h-[50px]" />
     </div>
   )
 }
