@@ -28,7 +28,7 @@ const Sidebar = () => {
             <img
               src={play}
               alt=""
-              className={`absolute w-[19px] h-[19px]  cursor-pointer ${
+              className={`w-[19px] h-[19px]  cursor-pointer ${
                 !open && "rotate-180"
               }`}
               onClick={() => setOpen(!open)}
@@ -39,7 +39,7 @@ const Sidebar = () => {
             {Menu.map((item, index) => (
               <li
                 key={index}
-                className="text-white text-md flex items-center gap-x-4 p-4 mx-2 hover:bg-[#737373] rounded-md cursor-pointer"
+                className="text-white text-md flex items-center gap-x-4 p-4 mx-2 hover:bg-[#737373] rounded-md cursor-pointer duration-200"
               >
                 <img src={`./src/assets/${item.src}.png`} alt={item.title} />
                 <p

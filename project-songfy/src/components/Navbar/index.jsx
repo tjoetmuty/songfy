@@ -28,7 +28,7 @@ const Navbar = () => {
         <p className="italic "> {data?.display_name}</p>
       </div>
       <img
-        src={data?.images[0]?.url}
+        src={data?.images?.url}
         alt="profile"
         className="rounded-full w-[50px] h-[50px]"
       />
