@@ -48,6 +48,7 @@ const Sidebar = () => {
                   } origin-lef duration-100`}
                   onClick={() => navigate(item?.path)}
                 >
+                  tes
                   {item.title}
                 </p>
               </li>
