@@ -1,6 +1,8 @@
+import DashboardFeatures from "../../features/Dashboard"
+
 const Dashboard = () => {
   return (
-    <div>ini Dashboard</div>
+    <DashboardFeatures/>
   )
 }
 

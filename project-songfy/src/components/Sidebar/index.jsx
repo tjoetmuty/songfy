@@ -13,6 +13,7 @@ const Sidebar = () => {
   ];
   return (
     <>
+    <div className="bg-black">
       <div className=" flex gap-2 px-2 py-2">
         <div
           className={`${
@@ -58,6 +59,7 @@ const Sidebar = () => {
           </ul>
         </div>
       </div>
+    </div>
     </>
   );
 };
