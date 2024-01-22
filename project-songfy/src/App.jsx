@@ -11,6 +11,8 @@ const App = () => {
       <Route element={<Wrapper/>}>
         <Route path="/dashboard" element={<Dashboard />}></Route>
         <Route path="/top-artist" element={<TopArtist />}></Route>
+        <Route path="/top-music" element={<TopArtist />}></Route>
+        <Route path="/recently-played" element={<TopArtist />}></Route>
       </Route>
     </Routes>
   );
