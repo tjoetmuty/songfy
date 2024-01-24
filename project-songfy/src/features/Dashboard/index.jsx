@@ -23,9 +23,9 @@ const DashboardFeatures = () => {
   }, []);
   return (
   <div>ini dashboard ya
-    {dash?.items?.map((data, index) =>(
+    {dash?.categories?.items?.map((data, index) =>(
       <div key={index}>
-        {data?.items?.href}
+        {data?.items[0]?.href}
       </div>
     ))}
   </div>
