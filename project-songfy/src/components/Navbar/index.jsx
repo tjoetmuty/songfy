@@ -22,14 +22,13 @@ const Navbar = () => {
     getMe();
   }, []);
   return (
-      <div className="bg-black ">
-      <div className="w-full h-20 bg-[#5B3838] rounded-xl flex justify-between items-center px-3">
+    
+      <div className="h-20 bg-[#5B3838] rounded-xl flex justify-between items-center px-3">
         <div className="flex gap-1">
-          <h1 className="font-bold text-[40px] text-white">Welcome,</h1>
-          <p className="italic text-[40px] text-white"> {data?.display_name}</p>
+          <h1 className="font-bold text-[30px] text-white">Welcome </h1><br />
+          <p className="italic text-[30px] text-white"> {data?.display_name}</p>
         </div>
         <img src={data?.images[0]?.url} alt="" className="rounded-full w-[64px] h-[64px]"/>
-      </div>
       </div>
     
   );
