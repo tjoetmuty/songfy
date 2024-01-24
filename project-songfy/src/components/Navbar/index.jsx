@@ -12,7 +12,7 @@ const Navbar = () => {
         },
       });
       setData(res.data);
-      console.log(res);
+      console.log("ini navbar", res.data);
     } catch (err) {
       console.log(err);
     }

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 const DashboardFeatures = () => {
-  const [dash, setDash] = useState({})
+  const [data, setData] = useState({})
   const getMe = async () => {
     try {
       // eslint-disable-next-line no-undef
@@ -11,7 +11,7 @@ const DashboardFeatures = () => {
           Authorization: `Bearer ${localStorage.getItem("access_token")}`,
         },
       });
-      setDash(res.data);
+      setData(res.data);
       console.log("ini dashboard", res.data);
     } catch (err) {
       console.log(err);
@@ -20,10 +20,10 @@ const DashboardFeatures = () => {
 
   useEffect(() => {
     getMe();
-  }, []);
+  }, []); 
   return (
   <div>ini dashboard ya
-    {dash?.categories?.items?.map((data, index) =>(
+    {data?.categories?.items?.map((data, index) =>(
       <div key={index}>
         {data?.items[0]?.href}
       </div>
