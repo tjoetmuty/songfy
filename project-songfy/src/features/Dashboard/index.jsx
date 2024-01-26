@@ -22,12 +22,16 @@ const DashboardFeatures = () => {
     getMe();
   }, []); 
   return (
-  <div>ini dashboard ya
-    {data?.categories?.items?.map((data, index) =>(
-      <div key={index}>
-        {data?.items[0]?.name}
+  <div>
+    <h1>ini dashboard ya</h1>
+    <div className="flex gap-2 flex-wrap">
+
+    {data?.categories?.items?.map((item, index) =>(
+      <div key={index} className="bg-black w-24 h-24">
+        <h1 className="text-white">{item?.name}</h1>
       </div>
     ))}
+    </div>
   </div>
   )
 };
