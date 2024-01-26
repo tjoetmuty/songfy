@@ -3,6 +3,7 @@ import axios from "axios";
 
 const Navbar = () => {
   const [data, setData] = useState({});
+  const [images, setImages] = useState('')
   const getMe = async () => {
     try {
       // eslint-disable-next-line no-undef
@@ -11,8 +12,9 @@ const Navbar = () => {
           Authorization: `Bearer ${localStorage.getItem("access_token")}`,
         },
       });
-      setData(res.data);
-      console.log("ini navbar", res);
+      setData(res?.data);
+      setImages(res?.data?.images[0]?.url)
+      console.log("ini navbar", res.data);
     } catch (err) {
       console.log(err);
     }
@@ -20,7 +22,7 @@ const Navbar = () => {
 
   useEffect(() => {
     getMe();
-  }, []);
+  }, [data]);
   return (
     
       <div className="h-20 bg-[#5B3838] rounded-xl flex justify-between items-center px-3">
@@ -28,7 +30,7 @@ const Navbar = () => {
           <h1 className="font-bold text-[30px] text-white">Welcome </h1><br />
           <p className="italic text-[30px] text-white"> {data?.display_name}</p>
         </div>
-        <img src={data?.images[0]?.url} alt="" className="rounded-full w-[64px] h-[64px]"/>
+        <img src={images} alt="" className="rounded-full w-[64px] h-[64px]"/>
       </div>
     
   );
