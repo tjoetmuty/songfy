@@ -30,7 +30,7 @@ const Navbar = () => {
           <h1 className="font-bold text-[30px] text-white">Welcome </h1><br />
           <p className="italic text-[30px] text-white"> {data?.display_name}</p>
         </div>
-        <img src={data?.images?.url} alt="gambar" className="rounded-full w-[64px] h-[64px]"/>
+        <img src={images} alt="gambar" className="rounded-full w-[64px] h-[64px]"/>
       </div>
     
   );
