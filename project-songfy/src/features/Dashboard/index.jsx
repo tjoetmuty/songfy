@@ -25,15 +25,22 @@ const DashboardFeatures = () => {
     getMe();
   }, []);
   return (
-    <div className="bg-black h-screen pt-2 pr-2">
-      <div className="bg-[#1E1E1E] w-full h-[500px] rounded-xl pt-2">
-        <div className="flex gap-2 flex-wrap justify-center m-2">
-          {data?.categories?.items?.slice(0, 18).map((item, index) => (
+    <div className="bg-black w-full pt-2 pr-2">
+      <div className="bg-[#1E1E1E] w-full rounded-xl p-2">
+        <div className=" gap-2 m-2 ">
+          {data?.categories?.items?.slice(0, 4).map((item, index) => (
             <div
               key={index}
-              className="w-24 h-24  hover:scale-95 duration-200 hover:shadow-md hover:shadow-gray-500/40 rounded-md"
+              className="w-[999x] h-[230px] shadow-xl hover:scale-[1.0] duration-200 hover:shadow-md hover:shadow-gray-500/40 rounded-md mt-4"
             >
-              <img src={item?.icons[0]?.url} alt="" className="rounded-md" />
+              <div className="flex items-center justify-between p-2">
+                <img
+                  src={item?.icons[0]?.url}
+                  alt=""
+                  className="rounded-md w-[210px] h-[210px]"
+                />
+                <h1 className="text-white font-semibold text-[50px] mr-[20px]">{item?.name}</h1>
+              </div>
             </div>
           ))}
         </div>
