@@ -1,7 +1,9 @@
-const recentlyPlayed = () => {
+import PlaylistFeatures from "../../features/Playlist"
+
+const Playlist = () => {
   return (
-    <div>index</div>
+    <PlaylistFeatures/>
   )
 }
 
-export default recentlyPlayed
+export default Playlist
