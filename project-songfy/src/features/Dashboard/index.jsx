@@ -20,7 +20,6 @@ const DashboardFeatures = () => {
       console.log(err);
     }
   };
-
   useEffect(() => {
     getMe();
   }, []);
