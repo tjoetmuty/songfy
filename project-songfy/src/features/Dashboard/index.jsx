@@ -21,7 +21,6 @@ const DashboardFeatures = () => {
     }
   };
 
-
   useEffect(() => {
     getMe();
   }, []);
@@ -29,10 +28,9 @@ const DashboardFeatures = () => {
     <div className="bg-black w-full pt-2 pr-2">
       <div className="bg-[#1E1E1E] w-full rounded-xl p-2">
         <div className=" gap-2 m-2 ">
-        {data?.categories?.items?.slice(0, 4).map((item) => (
+          {data?.categories?.items?.slice(0, 4).map((item) => (
             <div
               key={item?.id}
-          
               className="w-[999x] h-[230px] shadow-xl hover:scale-[1.0] duration-200 hover:shadow-md hover:shadow-gray-500/40 rounded-md mt-4"
             >
               <div className="flex items-center justify-between p-2">
@@ -41,14 +39,15 @@ const DashboardFeatures = () => {
                   alt=""
                   className="rounded-md w-[210px] h-[210px]"
                 />
-                <h1 className="text-white font-semibold text-[50px] mr-[20px]">{item?.name}</h1>
+                <h1 className="text-white font-semibold text-[50px] mr-[20px]">
+                  {item?.name}
+                </h1>
               </div>
             </div>
           ))}
         </div>
       </div>
     </div>
-    
   );
 };
 
