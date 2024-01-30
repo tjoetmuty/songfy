@@ -44,7 +44,7 @@ const Sidebar = () => {
                 key={index}
                 className="text-white text-md flex items-center gap-x-4 p-4 mx-2 hover:bg-[#737373] rounded-md cursor-pointer duration-200"
               >
-                <img src={`./src/assets/${item.src}.png`} alt={item.title} />
+                <img src={`./src/assets/${item.src}.png`} alt={item.title} className="w-[26px] h-[26px]"/>
                 <p
                   className={`text-white ${
                     !open && "hidden"
