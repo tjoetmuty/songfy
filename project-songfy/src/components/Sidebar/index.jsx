@@ -8,7 +8,7 @@ const Sidebar = () => {
   const Menu = [
     { path: "/dashboard", title: "Dashboard", src: "home"},
     { path: "/top-artist", title: "Top Artist", src: "Micro" },
-    { path: "/top-music", title: "Top Music", src: "Music" },
+    { path: "/recently-played", title: "Recently Played", src: "Delivery-Time" },
     { path: "/playlist", title: "Playlist", src: "playlist" },
   ];
   return (
