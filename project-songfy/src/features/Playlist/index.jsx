@@ -1,35 +1,25 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
+import { useGetPlaylist } from "../../hooks/useGetPlaylist";
+import { useNavigate } from "react-router-dom";
 
 const PlaylistFeatures = () => {
-  const [data, setData] = useState({});
-  const getPlaylist = async () => {
-    try {
-      const res = await axios.get("https://api.spotify.com/v1/me/playlists", {
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem("access_token")}`,
-        },
-      });
-      setData(res.data);
-      console.log("ini playlist", res.data);
-    } catch (err) {
-      console.log(err);
-    }
-  };
-  useEffect(() => {
-    getPlaylist();
-  }, []);
+  const { data } = useGetPlaylist();
+  const navigate = useNavigate();
+  const handleNavigate = (item) => {
+    console.log(item.id)
+    navigate(`/playlist/${item?.id}`);
+  }
   return (
     <div className="bg-black w-full pt-2 pr-2 h-screen">
       <div className="bg-[#1E1E1E] w-full rounded-xl p-2 h-[669px] overflow-y-auto">
         <div className="m-4">
-            <h1 className="text-white font-bold text-[30px]">Public Playlist</h1>
+          <h1 className="text-white font-bold text-[30px]">Public Playlist</h1>
         </div>
         <div className="flex flex-wrap gap-8 m-4">
           {data?.items?.map((item) => (
             <div
               key={item?.id}
               className=" bg-[#0B0A0A] w-[210px] h-[290px] shadow-xl duration-200 hover:shadow-md hover:bg-[#282828] rounded-md cursor-pointer"
+              onClick={() => handleNavigate(item)}
             >
               <div>
                 <div className="flex justify-center ">
