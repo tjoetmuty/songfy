@@ -1,6 +1,8 @@
 const RecentlyPlayFeat = () => {
   return (
-    <div>recently played</div>
+    <div>
+      
+    </div>
   )
 }
 
