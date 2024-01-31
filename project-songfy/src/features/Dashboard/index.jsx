@@ -24,8 +24,8 @@ const DashboardFeatures = () => {
     getMe();
   }, []);
   return (
-    <div className="bg-black w-full pt-2 pr-2">
-      <div className="bg-[#1E1E1E] w-full rounded-xl p-2 h-screen overflow-y-auto">
+    <div className="bg-black w-full h-screen pt-2 pr-2">
+      <div className="bg-[#1E1E1E] w-full rounded-xl p-2 h-[645px] overflow-y-auto">
         <div className=" gap-2 m-2">
           {data?.categories?.items?.map((item) => (
             <div
