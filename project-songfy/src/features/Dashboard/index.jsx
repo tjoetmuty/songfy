@@ -30,7 +30,7 @@ const DashboardFeatures = () => {
           {data?.categories?.items?.slice(0, 4).map((item) => (
             <div
               key={item?.id}
-              className="w-[999x] h-[230px] shadow-xl hover:scale-[1.0] duration-200 hover:shadow-md hover:shadow-gray-500/40 rounded-md mt-4"
+              className="bg-[#0B0A0A] w-[999x] h-[230px] shadow-xl hover:scale-[1.0] duration-200 hover:shadow-md hover:shadow-gray-500/40 rounded-md mt-4"
             >
               <div className="flex items-center justify-between p-2">
                 <img
