@@ -7,7 +7,7 @@ const Wrapper = () => {
     <div>
       <div className="flex">
         <Sidebar />
-        <div className="w-full my-2 mr-2">
+        <div className="w-full">
           <Navbar/>
           <Outlet />
         </div>
