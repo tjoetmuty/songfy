@@ -1,7 +1,7 @@
-const MusicFeatures = () => {
+const RecentlyPlayedFeat = () => {
   return (
     <div>recently played</div>
   )
 }
 
-export default MusicFeatures
+export default RecentlyPlayedFeat
