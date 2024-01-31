@@ -20,10 +20,10 @@ const Sidebar = () => {
             open ? `w-[242px]` : `w-[84px]`
           } duration-300 h-screen bg-[#1E1E1E] relative rounded-md `}
         >
-          <div className="flex gap-x-4 items-center pt-4 justify-between">
+          <div className={`flex gap-x-4 items-center pt-4 ${open ? "justify-between":"justify-center"} `}>
             <h1
               className={`text-white font-bold text-[32px] pl-4 origin-left ${
-                !open && "scale-0"
+                !open && "hidden"
               }`}
             >
               Songfy
@@ -31,8 +31,8 @@ const Sidebar = () => {
             <img
               src={play}
               alt=""
-              className={`w-[19px] h-[19px]  cursor-pointer ${
-                !open && "rotate-180"
+              className={`w-[19px] h-[19px]  cursor-pointer mr-4 ${
+                !open && "rotate-180 mr-0"
               }`}
               onClick={() => setOpen(!open)}
             />
