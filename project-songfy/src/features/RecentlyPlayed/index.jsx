@@ -1,6 +1,6 @@
 const MusicFeatures = () => {
   return (
-    <div>ini top music</div>
+    <div>recently played</div>
   )
 }
 
