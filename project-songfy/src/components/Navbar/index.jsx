@@ -25,18 +25,23 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="h-20 bg-[#5B3838] rounded-xl flex justify-between items-center px-3">
-      <div className="flex gap-1">
-        <h1 className="font-bold text-[30px] text-white">Welcome </h1>
-        <br />
-        <p className="italic text-[30px] text-white"> {data?.display_name}</p>
+    <>
+      <div className="bg-black">
+        <div className="bg-[#5B3838] rounded-md mr-2">
+          <div className="flex items-center pt-2 px-4 justify-between">
+            <h1 className="text-white font-bold text-[30px]">Hello</h1>
+            <div className="flex items-center gap-2">
+              <img
+                src={images}
+                alt=""
+                className="rounded-full w-[30px] h-[30px] border-4 border-[#282828]"
+              />
+              <h1 className="text-white">{data?.display_name}</h1>
+            </div>
+          </div>
+        </div>
       </div>
-      <img
-        src={images}
-        alt="my image alternative"
-        className="rounded-full w-[64px] h-[64px]"
-      />
-    </div>
+    </>
   );
 };
 
