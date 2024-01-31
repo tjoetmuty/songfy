@@ -4,6 +4,10 @@ import { useNavigate } from "react-router-dom";
 const PlaylistFeatures = () => {
   const { data } = useGetPlaylist();
   const navigate = useNavigate();
+  const handleNavigate = (item) => {
+    console.log(item.id)
+    navigate(`/playlist/${item?.id}`);
+  }
   return (
     <div className="bg-black w-full pt-2 pr-2 h-screen">
       <div className="bg-[#1E1E1E] w-full rounded-xl p-2 h-[669px] overflow-y-auto">
@@ -15,10 +19,7 @@ const PlaylistFeatures = () => {
             <div
               key={item?.id}
               className=" bg-[#0B0A0A] w-[210px] h-[290px] shadow-xl duration-200 hover:shadow-md hover:bg-[#282828] rounded-md cursor-pointer"
-              onClick={() => {
-                console.log(item.id)
-                navigate(`/playlist/${item?.id}`);
-              }}
+              onClick={() => handleNavigate(item)}
             >
               <div>
                 <div className="flex justify-center ">
