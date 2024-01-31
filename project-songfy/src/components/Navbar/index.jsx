@@ -26,9 +26,9 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="bg-black">
+      <div className="bg-black py-2">
         <div className="bg-[#5B3838] rounded-md mr-2">
-          <div className="flex items-center pt-2 px-4 justify-between">
+          <div className="flex px-4 items-center justify-between">
             <h1 className="text-white font-bold text-[30px]">Hello</h1>
             <div className="flex items-center gap-2">
               <img
