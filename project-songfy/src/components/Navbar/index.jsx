@@ -27,12 +27,12 @@ const Navbar = () => {
   return (
     <>
       <div className="bg-black">
-        <div className="bg-[#5B3838] rounded-md ">
+        <div className="bg-[#5B3838] rounded-md mr-2">
           <div className="flex items-center pt-2 px-4 justify-between">
             <h1 className="text-white font-bold text-[30px]">Hello</h1>
             <div className="flex items-center gap-2">
               <img
-                src={data?.images[0]?.url}
+                src={images}
                 alt=""
                 className="rounded-full w-[30px] h-[30px] border-4 border-[#282828]"
               />
