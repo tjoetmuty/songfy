@@ -25,9 +25,9 @@ const DashboardFeatures = () => {
   }, []);
   return (
     <div className="bg-black w-full pt-2 pr-2">
-      <div className="bg-[#1E1E1E] w-full rounded-xl p-2">
-        <div className=" gap-2 m-2 ">
-          {data?.categories?.items?.slice(0, 4).map((item) => (
+      <div className="bg-[#1E1E1E] w-full rounded-xl p-2 h-screen overflow-y-auto">
+        <div className=" gap-2 m-2">
+          {data?.categories?.items?.map((item) => (
             <div
               key={item?.id}
               className="bg-[#0B0A0A] w-[999x] h-[230px] shadow-xl hover:scale-[1.0] duration-200 hover:shadow-md hover:shadow-gray-500/40 rounded-md mt-4"
