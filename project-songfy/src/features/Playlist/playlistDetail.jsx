@@ -35,7 +35,7 @@ const PlaylistDetailFeat = () => {
   }, []);
   return (
     <div className="bg-black h-screen">
-      <div className="bg-[#1E1E1E] rounded-md p-2 overflow-y-auto h-[669px]">
+      <div className="bg-[#1E1E1E] rounded-md px-2 py-2 overflow-y-auto h-[676px]">
         <img
           src={previous}
           className=" text-white cursor-pointer w-[25px] h-[25px]"
@@ -57,7 +57,7 @@ const PlaylistDetailFeat = () => {
             </div>
           </div>
         </div>
-        <div className="bg-[#0B0A0A] mt-6 rounded-md">
+        <div className="bg-[#0B0A0A] mt-6 rounded-md pb-3">
           <div className="flex gap-9 m-4 pt-4">
             <div className="w-[300px]">
               <h1 className="text-white font-semibold ml-2"># Title</h1>
