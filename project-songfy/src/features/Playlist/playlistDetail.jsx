@@ -60,10 +60,13 @@ const PlaylistDetailFeat = () => {
         <div className="bg-[#0B0A0A] mt-6 rounded-md">
           <div className="flex gap-9 m-4 pt-4">
             <div className="w-[300px]">
-              <h1 className="text-white font-semibold ml-4"># Title</h1>
+              <h1 className="text-white font-semibold ml-2"># Title</h1>
             </div>
-            <div className="w-[300px] ml-4">
+            <div className="w-[300px] ml-2">
               <h1 className="text-white font-semibold">Album</h1>
+            </div>
+            <div className="w-[300px]">
+              <h1 className="text-white font-semibold">Artist</h1>
             </div>
           </div>
           <hr className="mx-2" />
@@ -80,6 +83,13 @@ const PlaylistDetailFeat = () => {
                 </div>
                 <div className="w-[300px] h-full flex items-center">
                   <p className="text-white">{data?.track?.album?.name}</p>
+                </div>
+                <div className="w-[300px] h-full flex items-center">
+                  <div className="text-white">{data?.track?.artists?.map((item, index) => (
+                    <p key={item} className="text-white">
+                      {item?.name}
+                    </p>
+                  ))}</div>
                 </div>
               </div>
             </div>
