@@ -20,7 +20,7 @@ const RecentlyPlayedFeat = () => {
     getRecently();
   }, []);
   return (
-    <div className="bg-black w-full pt-2 pr-2 h-screen">
+    <div className="bg-black w-full  pr-2 h-screen">
       <div className="bg-[#1E1E1E] w-full rounded-xl p-2 h-[669px] overflow-y-auto">
         <div className="m-4">
             <h1 className="text-white font-bold text-[30px]">Recently Played</h1>
