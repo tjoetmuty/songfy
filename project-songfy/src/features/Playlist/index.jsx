@@ -9,8 +9,8 @@ const PlaylistFeatures = () => {
     navigate(`/playlist/${item?.id}`);
   }
   return (
-    <div className="bg-black w-full pt-2 pr-2 h-screen">
-      <div className="bg-[#1E1E1E] w-full rounded-xl p-2 h-[669px] overflow-y-auto">
+    <div className="bg-black w-full pr-2 h-screen">
+      <div className="bg-[#1E1E1E] w-full rounded-xl px-2 py-2 h-[676px] overflow-y-auto">
         <div className="m-4">
           <h1 className="text-white font-bold text-[30px]">Public Playlist</h1>
         </div>
