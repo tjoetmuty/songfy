@@ -7,7 +7,6 @@ const Sidebar = () => {
   const navigate = useNavigate();
   const Menu = [
     { path: "/dashboard", title: "Dashboard", src: "home"},
-    { path: "/top-artist", title: "Top Artist", src: "Micro" },
     { path: "/recently-played", title: "Recently Played", src: "Delivery-Time" },
     { path: "/playlist", title: "Playlist", src: "playlist" },
   ];
