@@ -35,7 +35,7 @@ const PlaylistDetailFeat = () => {
   }, []);
   return (
     <div className="bg-black h-screen">
-      <div className="bg-[#1E1E1E] rounded-md p-2 h-screen overflow-y-auto">
+      <div className="bg-[#1E1E1E] rounded-md p-2 overflow-y-auto h-[669px]">
         <img
           src={previous}
           className=" text-white cursor-pointer w-[25px] h-[25px]"
