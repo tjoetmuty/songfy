@@ -43,7 +43,7 @@ const LoginFeatures = () => {
               onClick={() => {
                 token ? navigate('/dashboard') : handleLogin()
               }}
-              className="text-white font-semibold w-48 h-10 flex justify-center items-center bg-[#0A68AB] rounded"
+              className="text-white font-semibold w-48 h-10 flex justify-center items-center bg-[#0A68AB] rounded hover:bg-blue-900"
             >
               {token ? "Go to Dashboard" : "Login with Spotify"}
             </button>

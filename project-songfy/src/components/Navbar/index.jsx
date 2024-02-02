@@ -4,6 +4,7 @@ import axios from "axios";
 const Navbar = () => {
   const [data, setData] = useState({});
   const [images, setImages] = useState("");
+  const user = "https://open.spotify.com/user/pwjxjuk2fvz5an90skhu6bhfe";
   const getMe = async () => {
     try {
       // eslint-disable-next-line no-undef
@@ -31,13 +32,16 @@ const Navbar = () => {
           <div className="flex px-4 items-center justify-between">
             <div className="flex items-center gap-2">
               <h1 className="text-white font-thin text-[30px]">Welcome</h1>
-              <h1 className="text-white font-semibold text-[30px]">{data?.display_name}</h1>
+              <h1 className="text-white font-semibold text-[30px]">
+                {data?.display_name}
+              </h1>
             </div>
             <div className="flex items-center gap-2">
               <img
                 src={images}
-                alt=""
+                alt="profile photo"
                 className="rounded-full w-[35px] h-[35px] border-4 border-[#282828]"
+                onClick={user}
               />
             </div>
           </div>
