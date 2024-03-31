@@ -6,3 +6,7 @@ This project named **'Songfy'** uses the Spotify Web API for creating a web appl
 - Dashboard
 - User's Playlists: displays user's playlists
 - Recently Played
+
+## Tech Stack
+
+![Alt Text](https://skillicons.dev/icons?i=javascript,react,tailwindcss&perline=10)
