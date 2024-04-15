@@ -4,7 +4,7 @@ import Sidebar from "../Sidebar";
 
 const Wrapper = () => {
   return (
-    <div>
+    <div className="bg-black">
       <div className="flex">
         <Sidebar />
         <div className="w-full">

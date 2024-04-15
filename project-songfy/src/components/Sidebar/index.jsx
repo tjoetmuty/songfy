@@ -1,64 +1,76 @@
-import play from "../../assets/gravity.png";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Home } from "lucide-react";
+import { History } from "lucide-react";
+import { LibraryBig } from "lucide-react";
+import { SquarePlay } from "lucide-react";
+import play from "../../assets/chevron-right.svg";
 
 const Sidebar = () => {
   const [open, setOpen] = useState(true);
   const navigate = useNavigate();
-  const Menu = [
-    { path: "/dashboard", title: "Dashboard", src: "home"},
-    { path: "/recently-played", title: "Recently Played", src: "Delivery-Time" },
-    { path: "/playlist", title: "Playlist", src: "playlist" },
-  ];
   return (
-    <>
-    <div className="bg-black">
-      <div className=" flex gap-2 px-2 py-2">
+    <div>
+      <div className="bg-black ">
         <div
           className={`${
-            open ? `w-[242px]` : `w-[84px]`
-          } duration-300 h-screen bg-[#1E1E1E] relative rounded-md `}
+            open ? `w-[242px]` : `w-[80px]`
+          } h-screen bg-[#1E1E1E] text-white p-5 pt-8 relative duration-300 rounded-xl m-2`}
         >
-          <div className={`flex gap-x-4 items-center pt-4 ${open ? "justify-between":"justify-center"} `}>
+          <img
+            src={play}
+            className={`absolute cursor-pointer -right-3 top-12 w-8 border-2 border-[#1E1E1E]  rounded-full bg-white ${
+              open && "rotate-180"
+            }`}
+            onClick={() => setOpen(!open)}
+          />
+          <div className="flex items-center gap-x-2 p-2">
+            <SquarePlay />
             <h1
-              className={`text-white font-bold text-[32px] pl-4 origin-left ${
+              className={`text-white origin-left font-semibold text-3xl duration-300 ${
                 !open && "hidden"
               }`}
             >
               Songfy
             </h1>
-            <img
-              src={play}
-              alt=""
-              className={`w-[19px] h-[19px]  cursor-pointer mr-4 ${
-                !open && "rotate-180 mr-0"
-              }`}
-              onClick={() => setOpen(!open)}
-            />
           </div>
-          <hr className="mx-4 my-[24px]" />
-          <ul>
-            {Menu.map((item, index) => (
-              <li
-                key={index}
-                className="text-white text-md flex items-center gap-x-4 p-4 mx-2 hover:bg-[#737373] rounded-md cursor-pointer duration-200"
+          <hr className="mx-0 mt-6 origin-left" />
+          <div
+            className={` ${
+              open ? "justify-between" : "justify-center"
+            } pt-6 flex flex-col gap-4  items-start`}
+          >
+            <div className="flex gap-2 hover:bg-gray-500 w-full hover:rounded-md p-2">
+              <Home />
+              <p
+                className={`${!open && "hidden"}  duration-200 cursor-pointer `}
+                onClick={() => navigate("/dashboard")}
               >
-                <img src={`./src/assets/${item.src}.png`} alt={item.title} className="w-[26px] h-[26px]"/>
-                <p
-                  className={`text-white ${
-                    !open && "hidden"
-                  } origin-lef duration-100`}
-                  onClick={() => navigate(item?.path)}
-                >
-                  {item.title}
-                </p>
-              </li>
-            ))}
-          </ul>
+                Dashboard
+              </p>
+            </div>
+            <div className="flex gap-2 hover:bg-gray-500 w-full hover:rounded-md p-2">
+              <History />
+              <p
+                className={`${!open && "hidden"} duration-200 cursor-pointer`}
+                onClick={() => navigate("/recently-played")}
+              >
+                Recently Played
+              </p>
+            </div>
+            <div className="flex gap-2 hover:bg-gray-500 w-full hover:rounded-md p-2">
+              <LibraryBig />
+              <p
+                className={`${!open && "hidden"} duration-200 cursor-pointer`}
+                onClick={() => navigate("/playlist")}
+              >
+                Playlist
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    </>
   );
 };
 
