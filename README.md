@@ -25,8 +25,15 @@ cd project-songfy
 ```
 npm install
 ```
+## Create your CLIENT ID
+1. Copy, visit link below and follow the instructions
+```
+https://developer.spotify.com/documentation/web-api
+```
+
 <!-- ## Setting up Environment 
 1. Go to `config.js` file on the `helpers` folder
+2. Fill the CLIENT -->
 
-## How to Use:
+<!-- ## How to Use:
 1.  -->
